@@ -48,7 +48,7 @@ class Router {
   /**
    * Generates a URL from a route name. It dynamically injects the parameters inside the url.
    * @param {string} name Name of the route
-   * @param {?Object} params Parameters to inject in the route path
+   * @param {Object?} params Parameters to inject in the route path
    * @returns {string} the URL
    */
   toUrl(name, params) {
