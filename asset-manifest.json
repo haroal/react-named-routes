@@ -1,4 +1,19 @@
 {
-  "main.js": "static/js/main.c939432c.js",
-  "main.js.map": "static/js/main.c939432c.js.map"
+  "files": {
+    "main.js": "/react-named-routes/static/js/main.2242647d.chunk.js",
+    "main.js.map": "/react-named-routes/static/js/main.2242647d.chunk.js.map",
+    "runtime-main.js": "/react-named-routes/static/js/runtime-main.1c153390.js",
+    "runtime-main.js.map": "/react-named-routes/static/js/runtime-main.1c153390.js.map",
+    "static/js/2.9d557a00.chunk.js": "/react-named-routes/static/js/2.9d557a00.chunk.js",
+    "static/js/2.9d557a00.chunk.js.map": "/react-named-routes/static/js/2.9d557a00.chunk.js.map",
+    "index.html": "/react-named-routes/index.html",
+    "precache-manifest.c2471836c94d31b9ac59cb16d1b0b67b.js": "/react-named-routes/precache-manifest.c2471836c94d31b9ac59cb16d1b0b67b.js",
+    "service-worker.js": "/react-named-routes/service-worker.js",
+    "static/js/2.9d557a00.chunk.js.LICENSE.txt": "/react-named-routes/static/js/2.9d557a00.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c153390.js",
+    "static/js/2.9d557a00.chunk.js",
+    "static/js/main.2242647d.chunk.js"
+  ]
 }
