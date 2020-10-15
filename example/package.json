@@ -17,6 +17,7 @@
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
     "react-named-routes": "file:..",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "file:../node_modules/react-scripts",
     "typescript": "file:../node_modules/typescript"
   },
