@@ -73,3 +73,5 @@ Please check the `example` folder to see how it works.
 ## License
 
 MIT © [haroal](https://github.com/haroal)
+
+> Made with create-react-library

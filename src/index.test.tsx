@@ -25,13 +25,13 @@ describe('router', () => {
       expect(router.globalRoutes).toHaveProperty('group.path', '/home/group')
     })
 
-    it('should register route path with custom data', () => {
+    it('should register route path with route data', () => {
       router.registerRoutes('', {
-        user: { path: '/home', exact: true, text: 'text' }
+        user: { path: '/home', exact: true, strict: false }
       })
 
       expect(router.globalRoutes).toHaveProperty('user.exact', true)
-      expect(router.globalRoutes).toHaveProperty('user.text', 'text')
+      expect(router.globalRoutes).toHaveProperty('user.strict', false)
     })
 
     it("shouldn't register duplicated route", () => {

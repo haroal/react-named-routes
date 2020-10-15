@@ -1,6 +1,9 @@
-import pathToRegexp from 'path-to-regexp'
+import * as pathToRegexp from 'path-to-regexp'
+import { NamedRoutes, Route } from './typings'
 
 class Router {
+  public globalRoutes: NamedRoutes
+
   /**
    * A router that will contain the routes.
    * @constructor
@@ -8,7 +11,7 @@ class Router {
   constructor() {
     /**
      * Contains all the registered routes.
-     * @type {Object<string, Object>}
+     * @type {Object<string, Route>}
      */
     this.globalRoutes = {}
   }
@@ -17,10 +20,10 @@ class Router {
    * Registers multiple routes into the router. Adds the given prefix at the beginning of each route path.
    * It also prevents from registering the same route name twice by throwing an Error.
    * @param {string} prefix Root path to add to each route path.
-   * @param {Object} routes Set of routes to register. Must contain at least a `path` property, but can also register
-   *                        any extra information you want to store.
+   * @param {NamedRoutes} routes Set of routes to register. Must contain at least a `path` property,
+   *        but can also register any extra information you want to store.
    */
-  registerRoutes(prefix, routes) {
+  public registerRoutes(prefix: string, routes: NamedRoutes): void {
     for (const [name, route] of Object.entries(routes)) {
       if (this.globalRoutes[name] !== undefined) {
         throw Error(`Route with name "${name}" already registered`)
@@ -36,9 +39,9 @@ class Router {
   /**
    * Returns all the registered route information by name.
    * @param {string} name Name given to the route when registered.
-   * @returns {Object} the route information
+   * @returns {Route} the route information
    */
-  getRoute(name) {
+  public getRoute(name: string): Route {
     const route = this.globalRoutes[name]
     if (route === undefined) throw Error(`Route with name "${name}" not found`)
 
@@ -51,7 +54,7 @@ class Router {
    * @param {Object?} params Parameters to inject in the route path
    * @returns {string} the URL
    */
-  toUrl(name, params) {
+  public toUrl(name: string, params?: any): string {
     const { path } = this.getRoute(name)
     const compiler = pathToRegexp.compile(path)
 
